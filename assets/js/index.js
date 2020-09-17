@@ -21,16 +21,7 @@ console.log('resultVar2 = ', resultVar2);
 
 const string2 = 'azza acxca azxza wwxwwa';
 const regExp2 = /\ba[^a]+a\b/g;
-const newString = string2
-    .match(regExp2)
-    .join(' ')
-    .replace(regExp2, (match) => `!${match.slice(1, match.length - 1)}!`); //variant 1
-
-const newString2 = string2
-    .match(regExp2)
-    .map((string) => `!${string.slice(1, string.length - 1)}!`)
-    .join(' '); //variant 2
+const newString = string2.replace(regExp2, (match) => '!'); //variant 1
 
 console.log('string2 = ', string2);
 console.log('newString = ', newString);
-console.log('newString2 = ', newString2);
